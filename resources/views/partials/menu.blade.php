@@ -20,7 +20,7 @@
                         </p>
                     </a>
                 </li>
-                @can('data_aset_access')
+                <!-- @can('data_aset_access')
                     <li class="nav-item has-treeview {{ request()->is("admin/data-perangkat-keras*") ? "menu-open" : "" }}">
                         <a class="nav-link nav-dropdown-toggle" href="#">
                             <i class="fa-fw nav-icon fas fa-database">
@@ -31,7 +31,7 @@
                                 <i class="right fa fa-fw fa-angle-left nav-icon"></i>
                             </p>
                         </a>
-                        <ul class="nav nav-treeview">
+                        <ul class="nav nav-treeview"> -->
                             @can('data_perangkat_kera_access')
                                 <li class="nav-item">
                                     <a href="{{ route("admin.data-perangkat-keras.index") }}" class="nav-link {{ request()->is("admin/data-perangkat-keras") || request()->is("admin/data-perangkat-keras/*") ? "active" : "" }}">
@@ -44,9 +44,9 @@
                                     </a>
                                 </li>
                             @endcan
-                        </ul>
+                        <!-- </ul>
                     </li>
-                @endcan
+                @endcan -->
                 @can('data_master_access')
                     <li class="nav-item has-treeview {{ request()->is("admin/raks*") ? "menu-open" : "" }} {{ request()->is("admin/merks*") ? "menu-open" : "" }} {{ request()->is("admin/jenis*") ? "menu-open" : "" }} {{ request()->is("admin/statuses*") ? "menu-open" : "" }} {{ request()->is("admin/data-centers*") ? "menu-open" : "" }}">
                         <a class="nav-link nav-dropdown-toggle" href="#">
